@@ -1,20 +1,19 @@
 pipeline {
-    environment {
-        SERVICE = 'learn'
+    agent {
+
     }
-    options {
-        buildDiscarder(logRotator(daysToKeepStr: env.BRANCH_NAME == 'master' ? '90' : '30'))
+    environment {
+
     }
     stages {
-        stage {
+        stage('Checkout') {
             when {
-                anyOf { branch 'master'; branch 'develop'; branch 'staging' }
+                anyOf { branch 'main'; branch 'develop'; branch 'staging' }
             }
-        }
-        // Do cLone
-        steps {
-            echo "Checking out from git"
-            checkout scm
+            steps {
+                echo 'Checking out from Git'
+                checkout scm
+            }
         }
     }
 }
