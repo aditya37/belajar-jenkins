@@ -1,7 +1,9 @@
 pipeline {
     agent {
-        node 'master'
-        customWorkspace "workspace/${env.BRANCH_NAME}/src/github.com/aditya37/belajar-jenkins"   
+        node {
+            label 'master'
+            customWorkspace "workspace/${env.BRANCH_NAME}/src/github.com/aditya37/belajar-jenkins"   
+        }        
     }
     environment {
         SERVICE = 'learn-jenkis'
