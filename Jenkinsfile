@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Checking out from Git'
                 checkout scm
-                sh 'docker-compose'
+                sh 'docker-compose up'
             }
         }
     }
