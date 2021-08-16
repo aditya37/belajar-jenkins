@@ -23,6 +23,7 @@ pipeline {
             }
             steps {
                 // Ensure the desired Go version is installed
+                echo "${PATH}"
                 sh 'go test'
             }
         }
