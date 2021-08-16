@@ -18,6 +18,9 @@ pipeline {
             when {
                 anyOf { branch 'main'; branch 'develop'; branch 'staging' }
             }
+            environment {
+                PATH = "${env.GOPATH}/bin:${env.PATH}"
+            }
             steps {
                 // Ensure the desired Go version is installed
                 sh 'go test ./...'
