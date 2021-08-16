@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 // Ensure the desired Go version is installed
-                sh 'go'
+                sh 'go version'
             }
         }
     }
