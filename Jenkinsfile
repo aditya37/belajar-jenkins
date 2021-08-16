@@ -6,7 +6,7 @@ pipeline {
         }
     }
     tools {
-        go 'go-1.11'
+        go 'golang'
     }
     environment {
         SERVICE = 'learn-jenkis'
