@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'golang' }
         node {
             label 'master'
             customWorkspace "workspace/${env.BRANCH_NAME}/src/github.com/aditya37/belajar-jenkins"   
         }
     }
+    tools {}
     environment {
         SERVICE = 'learn-jenkis'
     }
