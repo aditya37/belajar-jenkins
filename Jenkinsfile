@@ -24,7 +24,7 @@ pipeline {
             steps {
                 // Ensure the desired Go version is installed
                 echo "${PATH}"
-                sh 'go test'
+                sh '/usr/local/go/bin/go'
             }
         }
     }
