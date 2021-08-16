@@ -23,7 +23,7 @@ pipeline {
             }
             steps {
                 // Ensure the desired Go version is installed
-                sh '/usr/local/go/bin/go test'
+                sh 'go test'
             }
         }
     }
