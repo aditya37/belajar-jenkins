@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 // Ensure the desired Go version is installed
-                echo "${HOME}/go"
+                sh "${HOME}/go/bin/go test"
             }
         }
     }
