@@ -10,6 +10,7 @@ pipeline {
     }
     environment {
         SERVICE = 'learn-jenkis'
+        GO111MODULE = 'on'
     }
     //Parent stages
     stages {
@@ -19,7 +20,7 @@ pipeline {
             }
             steps {
                 // Ensure the desired Go version is installed
-                sh 'go version'
+                sh 'go test ./...'
             }
         }
     }
