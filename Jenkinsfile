@@ -23,8 +23,8 @@ pipeline {
             }
             steps {
                 // Ensure the desired Go version is installed
-                echo "${PATH}"
-                sh '/usr/local/go/bin/go test'
+                // echo "${PATH}"
+                // sh '/usr/local/go/bin/go test'
             }
         }
         stage('prepare') {
