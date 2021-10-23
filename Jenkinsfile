@@ -27,5 +27,18 @@ pipeline {
                 sh '/usr/local/go/bin/go test'
             }
         }
+        stage('prepare') {
+            steps {
+                withCredentials([file(credentialsId: 'b067d4c8-d147-4732-8725-cb84c520759b', variable: 'sa')]) {
+                    sh "cp $sa service-account.json"
+                    sh "chmod 644 service-account.json"
+                }
+            }
+        }
+        stage('ls') {
+            steps {
+                sh 'ls'
+            }
+        }
     }
 }
